@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --red: #EB274B;
+    --blue: #10AEDB;
+    --yellow: #FCEA3B;
+    --white: #FFF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* =========================== REUSABLE ============================== */
+.btn-primary{
+    padding: 1rem 1.2rem;
+    background-color: var(--blue);
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px 1px #000000;
+
+    transition: .2s;
+}
+
+.btn-primary:hover{
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px 1px #000000;
+}
+
+.btn-primary:active{
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+/* =========================== NAVBAR ============================== */
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+
+    background-color: var(--white);
+
+    border-bottom: 2px solid #7e7e7e;
+    padding: .7rem 0;
+}
+
+.nav-logo a{
+    text-decoration: none;
+}
+
+.nav-logo h2{
+    font-size: 2rem;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    padding: 0 .5rem;
+}
+
+
+.nav-items input{
+    padding: .5rem 1rem;
+    background-color: #efefef;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    width: 250px;
+}
+
+.search i{
+    position: relative;
+    left: 287px;
+    top: 3px;
+    cursor: pointer;
+    padding: 9px;
+    border-radius: 40px;
+    transition: .1s;
+}
+
+.search i:hover{
+    background-color: #CCC;
+}
+
+/* =========================== MAIN ============================== */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 120px;
+    left: 50px;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 2px solid #7e7e7e;
+    width: 250px;
+    height: 79vh;
+}
+
+.zoek-btn{
+    padding: .5rem .2rem;
+    background-color: var(--blue);
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px 1px #000000;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: 30px;
+    width: 85%;
+
+    transition: .2s;
+}
+
+.zoek-btn:hover{
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px 1px #000000;
+}
+
+.zoek-btn:active{
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+select{
+    padding: .3rem .2rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+/* =========================== SHOP ============================== */
+.shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    left: 165px;
+
+    flex-wrap: wrap;
+    margin: 5rem 10vw;
+}
+
+.shop a {
+    text-decoration: none;
+}
+
+.card {
+    margin: 1.5rem;
+    transition: .2s;
+    height: 300px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 200px;
+    background-color: #efefef;
+    padding: 2rem;
+
+
+}
+
+.card h2 {
+    color: #333333;
+    font-size: 17px;
+}
+
+.card p {
+    color: #333333;
+    font-size: 13px;
+    max-width: 250px;
+}
+
+@media screen and (max-width: 900px){
+    .shop{
+        margin: 0 2vw;
+    }
+}
+
+
+@media screen and (max-width: 740px){
+    .card{
+        margin: .5rem;
+    }
+
+    .card img{
+        width: 120px;
+        padding: 1rem;
+    }
+
+    .card p{
+        max-width: 120px;
+    }
+
+    .shop{
+        margin: 0 0;
+    }
+
+    .sort-bar{
+        width: 95vw;
+    }
+}
+
+/* =========================== detail ============================== */
+.schoen{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0 10vw;
+}
+
+.foto{
+    background-color: #efefef;
+    padding: 5rem;
+    text-align: center;
+}
+
+.text{
+    position: relative;
+    top: -5vh;
+    padding: 5rem;
+}
+
+.text h2{
+    font-size: 2.7rem;
+}
+
+.text h4{
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.maat{
+    margin-bottom: 2rem;
+}
+
+.info{
+    font-size: 16px;
+
+    margin-bottom: 2rem;
+}
+
+select{
+    padding: .2rem;
+    border: 1px #333333 solid;
+    border-radius: .3rem;
+}
+
+.prijs{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.backBtn{
+    position: fixed;
+    left: 1rem;
+    top: 5rem;
+
+    border: none;
+    padding: .3rem .75rem;
+    border-radius: .5rem;
+    background-color: none;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.locatie img{
+    width: 400px;
+}
+
+
+/* =========================== MEDIA QUERIES ============================== */
+
+@media screen and (max-width: 1300px) {
+    .schoen{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .schoen{
+        margin-top: 10rem;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .text{
+        padding: 4rem 1rem;
+    }
+
+    .foto img{
+        max-width: 200px;
+    }
+}
